@@ -1,3 +1,55 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-top:50px;
+}
+
+.nav-container {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.todo-container {
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.todo-card-container {
+  margin-top:100px;
+}
+
+.todo-card-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addNewTodo-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.addNewTodo-container input {
+  width:90%;
+}
+ .addNewTodo-container button {
+   width:10%;
+ }
+
+.todo-headline {
+  margin-bottom: 2rem;
+}
+
 .App {
   text-align: center;
 }
