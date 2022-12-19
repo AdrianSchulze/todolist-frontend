@@ -9,7 +9,7 @@ export enum Status {
 
 export type Todo = {
     id: string;
-    description?: string;
+    description: string;
     status: Status;
 }
 

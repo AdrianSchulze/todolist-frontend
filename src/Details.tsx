@@ -1,6 +1,7 @@
-import {Link, useParams} from "react-router-dom";
-import useTodos from "./useTodos";
+import {useParams} from "react-router-dom";
+import useTodos from "./Hooks/useTodos";
 import {useNavigate} from "react-router-dom";
+import Nav from "./Components/Nav";
 
 export default function Details() {
 
@@ -12,21 +13,15 @@ export default function Details() {
 
     return (
         <div className={"container"}>
-                <nav className={"nav-container"}>
-                    <Link to={"/"}
-                          style={{textDecoration: 'none black'}}>Home</Link>
-                    <Link to={"/todo"}
-                          style={{textDecoration: 'none black'}}>Todo</Link>
-                    <Link to={"/progress"} style={{textDecoration: 'none black'}}>In
-                        Progress</Link>
-                    <Link to={"/done"}
-                          style={{textDecoration: 'none black'}}>Done</Link>
-                </nav>
+            <Nav/>
             <div>
-            {foundTodo
-                ? <h2>{foundTodo.description}</h2>
-                : <div>Character not found</div>}
-            <button onClick={() => navigate(-1)}>Back</button>
+                {foundTodo
+                    ? <h2>{foundTodo.description}</h2>
+                    : <div>Character not found</div>}
+                {foundTodo
+                    ? <h4>Status: {foundTodo.status}</h4>
+                    : <div>Status not found</div>}
+                <button onClick={() => navigate(-1)}>Back</button>
             </div>
         </div>
     )

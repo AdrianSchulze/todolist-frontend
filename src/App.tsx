@@ -14,11 +14,9 @@ function App() {
             <Routes>
                 <Route path={"/"} element={<Root/>}/>
                 <Route path={"/todo"} element={<Todo/>}/>
-                <Route path={"/todo/:id"} element={<Todo/>}/>
                 <Route path={"/progress"} element={<Progress/>}/>
                 <Route path={"/done"} element={<Done/>}/>
                 <Route path={"/details/:id"} element={<Details/>}/>
-                <Route path={"/edit/:id"} element={<Details/>}/>
             </Routes>
         </BrowserRouter>
     );
